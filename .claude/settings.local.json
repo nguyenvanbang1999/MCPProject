@@ -15,7 +15,16 @@
       "Bash(ls -la .mcp.json 2>&1; echo \"---\"; ls -la ~/.claude.json 2>&1)",
       "mcp__unityMCP__read_console",
       "mcp__unityMCP__manage_scene",
-      "mcp__unityMCP__find_gameobjects"
+      "mcp__unityMCP__find_gameobjects",
+      "Bash(aspire --version)",
+      "mcp__aspire__list_apphosts",
+      "mcp__aspire__doctor",
+      "Bash(docker info *)",
+      "Bash(powershell -Command \"Start-Process 'C:\\\\Program Files\\\\Docker\\\\Docker\\\\Docker Desktop.exe'\")",
+      "Bash(aspire start *)",
+      "Bash(aspire ps *)",
+      "mcp__aspire__list_resources",
+      "mcp__unityMCP__game_login"
     ]
   }
 }

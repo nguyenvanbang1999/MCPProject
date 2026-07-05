@@ -269,10 +269,15 @@ namespace SharedContracts.ConnectController
                             }
                             ushort ackId = BitConverter.ToUInt16(ackBuf, 0);
                             Debug.Log($"ACK nhận được: {ackId}");
-                            if (dicACKMessage.TryGetValue(ackId, out var pending))
+                            PendingAck pending;
+                            bool hasPending;
+                            lock (dicACKMessage)
                             {
-                                // Xóa pending và raise event
-                                dicACKMessage.Remove(ackId);
+                                hasPending = dicACKMessage.TryGetValue(ackId, out pending);
+                                if (hasPending) dicACKMessage.Remove(ackId);
+                            }
+                            if (hasPending)
+                            {
                                 AckReceived?.Invoke(ackId, pending.Message);
                             }
                             else
@@ -433,11 +438,14 @@ namespace SharedContracts.ConnectController
         // Lấy ackId đã gán cho message (nếu có), hoặc 0 nếu không dùng ACK
         ushort GetAckId(Message message)
         {
-            foreach(var item in dicACKMessage)
+            lock (dicACKMessage)
             {
-                if (item.Value.Message.Equals( message))
+                foreach (var item in dicACKMessage)
                 {
-                    return item.Key;
+                    if (item.Value.Message.Equals(message))
+                    {
+                        return item.Key;
+                    }
                 }
             }
 
@@ -488,20 +496,23 @@ namespace SharedContracts.ConnectController
                 var toRetry = new List<ushort>();
                 var toTimeout = new List<ushort>();
 
-                foreach (var kv in dicACKMessage)
+                lock (dicACKMessage)
                 {
-                    var ackId = kv.Key;
-                    var pending = kv.Value;
-                    var elapsedMs = (now - pending.SentAtUtc).TotalMilliseconds;
-                    if (elapsedMs > ackTimeoutMs)
+                    foreach (var kv in dicACKMessage)
                     {
-                        if (pending.RetryCount < ackMaxRetry)
+                        var ackId = kv.Key;
+                        var pending = kv.Value;
+                        var elapsedMs = (now - pending.SentAtUtc).TotalMilliseconds;
+                        if (elapsedMs > ackTimeoutMs)
                         {
-                            toRetry.Add(ackId);
-                        }
-                        else
-                        {
-                            toTimeout.Add(ackId);
+                            if (pending.RetryCount < ackMaxRetry)
+                            {
+                                toRetry.Add(ackId);
+                            }
+                            else
+                            {
+                                toTimeout.Add(ackId);
+                            }
                         }
                     }
                 }
@@ -509,9 +520,13 @@ namespace SharedContracts.ConnectController
                 // Retry gửi lại message
                 foreach (var ackId in toRetry)
                 {
-                    if (!dicACKMessage.TryGetValue(ackId, out var pending)) continue;
-                    pending.RetryCount++;
-                    pending.SentAtUtc = now;
+                    PendingAck pending;
+                    lock (dicACKMessage)
+                    {
+                        if (!dicACKMessage.TryGetValue(ackId, out pending)) continue;
+                        pending.RetryCount++;
+                        pending.SentAtUtc = now;
+                    }
                     // Đưa lại message vào queue gửi
                     lock (listMessages) { listMessages.Add(pending.Message); }
                     messageSignal.Release();
@@ -521,8 +536,12 @@ namespace SharedContracts.ConnectController
                 // Timeout ACK
                 foreach (var ackId in toTimeout)
                 {
-                    if (!dicACKMessage.TryGetValue(ackId, out var pending)) continue;
-                    dicACKMessage.Remove(ackId);
+                    PendingAck pending;
+                    lock (dicACKMessage)
+                    {
+                        if (!dicACKMessage.TryGetValue(ackId, out pending)) continue;
+                        dicACKMessage.Remove(ackId);
+                    }
                     AckTimeout?.Invoke(ackId, pending.Message);
                     Debug.Log($"ACK timeout {ackId} after {pending.RetryCount} retries");
                 }
@@ -557,14 +576,18 @@ namespace SharedContracts.ConnectController
 
             if (needACK)
             {
-                ushort ackId = AllocateAckId();
-                dicACKMessage[ackId] = new PendingAck
+                // Lock chung cho việc cấp ackId + ghi vào dictionary để tránh 2 luồng gọi SendMessage
+                // đồng thời (VD: Gateway relay message từ nhiều kết nối client) cấp trùng ackId.
+                lock (dicACKMessage)
                 {
-                    Message = message,
-                    SentAtUtc = DateTime.UtcNow,
-                    RetryCount = 0
-                };
-
+                    ushort ackId = AllocateAckId();
+                    dicACKMessage[ackId] = new PendingAck
+                    {
+                        Message = message,
+                        SentAtUtc = DateTime.UtcNow,
+                        RetryCount = 0
+                    };
+                }
             }
 
             lock (listMessages) { listMessages.Add(message); }
