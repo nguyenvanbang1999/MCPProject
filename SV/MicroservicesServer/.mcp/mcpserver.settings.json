@@ -1,0 +1,9 @@
+{
+  "port": 3010,
+  "defaultPathFormat": "Windows",
+  "disabledTools": [
+    "translate_path",
+    "get_project_references"
+  ],
+  "autoStart": true
+}

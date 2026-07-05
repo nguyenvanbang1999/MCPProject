@@ -1,0 +1,1179 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-03-16T17:10:35.0576602Z",
+  "analysisEndTime": "2026-03-16T17:10:40.4175505Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 8,
+      "issues": 6,
+      "incidents": 34,
+      "effort": 34
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 10,
+        "Optional": 1,
+        "Potential": 23,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 15,
+        "Project": 6,
+        "Api": 13
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "AuthService.Contracts\\AuthService.Contracts.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "AuthService.Contracts",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.1"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 6,
+        "numberOfCodeFiles": 6,
+        "linesTotal": 78,
+        "linesOfCode": 78,
+        "totalApiScanned": 57,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "AuthService\\AuthService.csproj",
+      "startingProject": true,
+      "issues": 5,
+      "storyPoints": 8,
+      "properties": {
+        "appName": "AuthService",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 9,
+        "numberOfCodeFiles": 8,
+        "linesTotal": 352,
+        "linesOfCode": 334,
+        "totalApiScanned": 313,
+        "minLinesOfCodeToChange": 3,
+        "maxLinesOfCodeToChange": 3
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "80f1a22e-0626-4a05-a2f7-a5bd929895e2",
+          "ruleId": "NuGet.0002",
+          "projectPath": "AuthService\\AuthService.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Aspire.Hosting, 9.5.1\n\nRecommendation:\n\nRemove Aspire.Hosting, and replace with new package Aspire.Hosting.AppHost 13.1.2",
+              "protected": "Aspire.Hosting, 9.5.1\n\nRecommendation:\n\nRemove Aspire.Hosting, and replace with new package Aspire.Hosting.AppHost 13.1.2"
+            },
+            "kind": "File",
+            "path": "AuthService\\AuthService.csproj",
+            "snippet": "Aspire.Hosting, 9.5.1\n\nRecommendation:\n\nRemove Aspire.Hosting, and replace with new package Aspire.Hosting.AppHost 13.1.2",
+            "protectedSnippet": "Aspire.Hosting, 9.5.1\n\nRecommendation:\n\nRemove Aspire.Hosting, and replace with new package Aspire.Hosting.AppHost 13.1.2",
+            "label": "Aspire.Hosting 9.5.1",
+            "properties": {
+              "PackageId": "Aspire.Hosting",
+              "PackageVersion": "9.5.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": "Replace with new package Aspire.Hosting.AppHost=13.1.2"
+            }
+          }
+        },
+        {
+          "incidentId": "b83eda93-4f90-48f4-a90d-a2cbd375f206",
+          "ruleId": "NuGet.0002",
+          "projectPath": "AuthService\\AuthService.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.20\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.5",
+              "protected": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.20\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.5"
+            },
+            "kind": "File",
+            "path": "AuthService\\AuthService.csproj",
+            "snippet": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.20\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.5",
+            "protectedSnippet": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.20\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.5",
+            "label": "Microsoft.AspNetCore.Authentication.JwtBearer 8.0.20",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageVersion": "8.0.20",
+              "PackageNewVersion": "10.0.5",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "87487cc3-9741-4b19-959a-d13d485a27f7",
+          "ruleId": "NuGet.0002",
+          "projectPath": "AuthService\\AuthService.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Hosting.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.5",
+              "protected": "Microsoft.Extensions.Hosting.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.5"
+            },
+            "kind": "File",
+            "path": "AuthService\\AuthService.csproj",
+            "snippet": "Microsoft.Extensions.Hosting.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.5",
+            "protectedSnippet": "Microsoft.Extensions.Hosting.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.5",
+            "label": "Microsoft.Extensions.Hosting.Abstractions 9.0.9",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Hosting.Abstractions",
+              "PackageVersion": "9.0.9",
+              "PackageNewVersion": "10.0.5",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5cc0f02e-7a59-462f-97d3-6d831cb59054",
+          "ruleId": "NuGet.0005",
+          "projectPath": "AuthService\\AuthService.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Aspire.Hosting, 9.5.1\n\nRecommendation:\n\nThis version is out of support and is no longer maintained. Please upgrade to the latest version. See our support policy for details: https://aka.ms/dotnet/aspire/support\nRemove Aspire.Hosting, and replace with new package Aspire.Hosting, 13.1.2",
+              "protected": "Aspire.Hosting, 9.5.1\n\nRecommendation:\n\nThis version is out of support and is no longer maintained. Please upgrade to the latest version. See our support policy for details: https://aka.ms/dotnet/aspire/support\nRemove Aspire.Hosting, and replace with new package Aspire.Hosting, 13.1.2"
+            },
+            "kind": "File",
+            "path": "AuthService\\AuthService.csproj",
+            "snippet": "Aspire.Hosting, 9.5.1\n\nRecommendation:\n\nThis version is out of support and is no longer maintained. Please upgrade to the latest version. See our support policy for details: https://aka.ms/dotnet/aspire/support\nRemove Aspire.Hosting, and replace with new package Aspire.Hosting, 13.1.2",
+            "protectedSnippet": "Aspire.Hosting, 9.5.1\n\nRecommendation:\n\nThis version is out of support and is no longer maintained. Please upgrade to the latest version. See our support policy for details: https://aka.ms/dotnet/aspire/support\nRemove Aspire.Hosting, and replace with new package Aspire.Hosting, 13.1.2",
+            "label": "Aspire.Hosting 9.5.1",
+            "properties": {
+              "PackageId": "Aspire.Hosting",
+              "PackageVersion": "9.5.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "aff84228-ec5c-427c-8d9a-09a476d45a5d",
+          "ruleId": "Project.0002",
+          "projectPath": "AuthService\\AuthService.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "AuthService\\AuthService.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "21bc87a2-ac7b-4bdf-894f-3b3dffcf953b",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "AuthService\\AuthService.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(INTERVAL_SECONDS), stoppingToken);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "AuthService\\Services\\DemoPublisherService.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(INTERVAL_SECONDS), stoppingToken);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 68,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "e8d7f6c7-2863-46b7-92aa-9456ea81b6c3",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "AuthService\\AuthService.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(INTERVAL_SECONDS), stoppingToken);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "AuthService\\Services\\DemoPublisherService.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(INTERVAL_SECONDS), stoppingToken);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 35,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "c77f0611-a3bc-40e9-ba06-e66e242c536b",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "AuthService\\AuthService.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.Configure\u003CMongoDBSettings\u003E(\r\n                builder.Configuration.GetSection(\u0022MongoDB\u0022));",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "AuthService\\Program.cs",
+            "snippet": "builder.Services.Configure\u003CMongoDBSettings\u003E(\r\n                builder.Configuration.GetSection(\u0022MongoDB\u0022));",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 21,
+            "column": 12
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "GateWayTCP\\GateWayTCP.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 6,
+      "properties": {
+        "appName": "GateWayTCP",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 9,
+        "numberOfCodeFiles": 7,
+        "linesTotal": 492,
+        "linesOfCode": 464,
+        "totalApiScanned": 370,
+        "minLinesOfCodeToChange": 5,
+        "maxLinesOfCodeToChange": 5
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "0ac3831f-08b3-48c4-9579-8d5cec0e5ad9",
+          "ruleId": "Project.0002",
+          "projectPath": "GateWayTCP\\GateWayTCP.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "GateWayTCP\\GateWayTCP.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "22a79c40-9248-4d6a-8ed6-abdd0a20c8a1",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "GateWayTCP\\GateWayTCP.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var uri = new Uri(\u0022https://\u0022 \u002B urlTCPService);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "GateWayTCP\\Program.cs",
+            "snippet": "var uri = new Uri(\u0022https://\u0022 \u002B urlTCPService);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 80,
+            "column": 24
+          }
+        },
+        {
+          "incidentId": "022da948-1f6b-4e19-b12f-2499ce84f1eb",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "GateWayTCP\\GateWayTCP.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var uri = new Uri(\u0022https://\u0022 \u002B urlTCPService);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "GateWayTCP\\Program.cs",
+            "snippet": "var uri = new Uri(\u0022https://\u0022 \u002B urlTCPService);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 80,
+            "column": 24
+          }
+        },
+        {
+          "incidentId": "84a33b79-6b71-4b78-9a81-783e14e9c1b7",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Message no longer duplicated in Console log output ",
+          "projectPath": "GateWayTCP\\GateWayTCP.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Logging.AddSimpleConsole(opt =\u003E\r\n            {\r\n                opt.ColorBehavior = LoggerColorBehavior.Enabled;\r\n                opt.SingleLine = true;\r\n                opt.TimestampFormat = \u0022HH:mm:ss \u0022;\r\n            });",
+              "protected": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddSimpleConsole(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions})"
+            },
+            "kind": "File",
+            "path": "GateWayTCP\\Program.cs",
+            "snippet": "builder.Logging.AddSimpleConsole(opt =\u003E\r\n            {\r\n                opt.ColorBehavior = LoggerColorBehavior.Enabled;\r\n                opt.SingleLine = true;\r\n                opt.TimestampFormat = \u0022HH:mm:ss \u0022;\r\n            });",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddSimpleConsole(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions})",
+            "label": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddSimpleConsole(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions})",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/console-json-logging-duplicate-messages.md",
+                "isCustom": false
+              }
+            ],
+            "line": 22,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "17989957-5081-459e-a69e-5c40a05d9638",
+          "ruleId": "Api.0003",
+          "description": "URI query redaction in IHttpClientFactory logs ",
+          "projectPath": "GateWayTCP\\GateWayTCP.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddHttpClient();",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection)"
+            },
+            "kind": "File",
+            "path": "GateWayTCP\\Program.cs",
+            "snippet": "builder.Services.AddHttpClient();",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/9.0/query-redaction-logs.md",
+                "isCustom": false
+              }
+            ],
+            "line": 17,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "c9f94a80-ab1a-4eaf-a93c-b1cd4ead1d3b",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "GateWayTCP\\GateWayTCP.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var internalHost = _config.GetValue\u003Cstring\u003E(\u0022ASPIRE__ENDPOINT__TCP_INTERNAL__HOST\u0022) ?? \u0022localhost\u0022;",
+              "protected": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration,System.String)"
+            },
+            "kind": "File",
+            "path": "GateWayTCP\\TcpGatewayService.cs",
+            "snippet": "var internalHost = _config.GetValue\u003Cstring\u003E(\u0022ASPIRE__ENDPOINT__TCP_INTERNAL__HOST\u0022) ?? \u0022localhost\u0022;",
+            "protectedSnippet": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration,System.String)",
+            "label": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration,System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 55,
+            "column": 12
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "MicroservicesServer.AppHost\\MicroservicesServer.AppHost.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "MicroservicesServer.AppHost",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 33,
+        "linesOfCode": 33,
+        "totalApiScanned": 72,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "0d2f7a05-814e-4871-b471-a2bacbdaf78d",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MicroservicesServer.AppHost\\MicroservicesServer.AppHost.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Aspire.Hosting.AppHost, 13.1.0\n\nRecommendation:\n\nRemove Aspire.Hosting.AppHost, and replace with new package Aspire.Hosting.AppHost 13.1.2",
+              "protected": "Aspire.Hosting.AppHost, 13.1.0\n\nRecommendation:\n\nRemove Aspire.Hosting.AppHost, and replace with new package Aspire.Hosting.AppHost 13.1.2"
+            },
+            "kind": "File",
+            "path": "MicroservicesServer.AppHost\\MicroservicesServer.AppHost.csproj",
+            "snippet": "Aspire.Hosting.AppHost, 13.1.0\n\nRecommendation:\n\nRemove Aspire.Hosting.AppHost, and replace with new package Aspire.Hosting.AppHost 13.1.2",
+            "protectedSnippet": "Aspire.Hosting.AppHost, 13.1.0\n\nRecommendation:\n\nRemove Aspire.Hosting.AppHost, and replace with new package Aspire.Hosting.AppHost 13.1.2",
+            "label": "Aspire.Hosting.AppHost 13.1.0",
+            "properties": {
+              "PackageId": "Aspire.Hosting.AppHost",
+              "PackageVersion": "13.1.0",
+              "PackageNewVersion": "13.1.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d1eb02a5-36b7-49d9-b77e-13dbf86389cf",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MicroservicesServer.AppHost\\MicroservicesServer.AppHost.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Aspire.Hosting.Kafka, 13.1.0\n\nRecommendation:\n\nRemove Aspire.Hosting.Kafka, and replace with new package Aspire.Hosting.Kafka 13.1.2",
+              "protected": "Aspire.Hosting.Kafka, 13.1.0\n\nRecommendation:\n\nRemove Aspire.Hosting.Kafka, and replace with new package Aspire.Hosting.Kafka 13.1.2"
+            },
+            "kind": "File",
+            "path": "MicroservicesServer.AppHost\\MicroservicesServer.AppHost.csproj",
+            "snippet": "Aspire.Hosting.Kafka, 13.1.0\n\nRecommendation:\n\nRemove Aspire.Hosting.Kafka, and replace with new package Aspire.Hosting.Kafka 13.1.2",
+            "protectedSnippet": "Aspire.Hosting.Kafka, 13.1.0\n\nRecommendation:\n\nRemove Aspire.Hosting.Kafka, and replace with new package Aspire.Hosting.Kafka 13.1.2",
+            "label": "Aspire.Hosting.Kafka 13.1.0",
+            "properties": {
+              "PackageId": "Aspire.Hosting.Kafka",
+              "PackageVersion": "13.1.0",
+              "PackageNewVersion": "13.1.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5e419af1-a85c-4b86-bf51-284dbe2318ce",
+          "ruleId": "Project.0002",
+          "projectPath": "MicroservicesServer.AppHost\\MicroservicesServer.AppHost.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "MicroservicesServer.AppHost\\MicroservicesServer.AppHost.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "MicroservicesServer.ServiceDefaults\\MicroservicesServer.ServiceDefaults.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 5,
+      "properties": {
+        "appName": "MicroservicesServer.ServiceDefaults",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 127,
+        "linesOfCode": 127,
+        "totalApiScanned": 122,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "a1281640-2b9d-4a3c-afb1-0c7a9c4d588e",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MicroservicesServer.ServiceDefaults\\MicroservicesServer.ServiceDefaults.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Http.Resilience, 9.4.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Http.Resilience, and replace with new package Microsoft.Extensions.Http.Resilience 10.4.0",
+              "protected": "Microsoft.Extensions.Http.Resilience, 9.4.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Http.Resilience, and replace with new package Microsoft.Extensions.Http.Resilience 10.4.0"
+            },
+            "kind": "File",
+            "path": "MicroservicesServer.ServiceDefaults\\MicroservicesServer.ServiceDefaults.csproj",
+            "snippet": "Microsoft.Extensions.Http.Resilience, 9.4.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Http.Resilience, and replace with new package Microsoft.Extensions.Http.Resilience 10.4.0",
+            "protectedSnippet": "Microsoft.Extensions.Http.Resilience, 9.4.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Http.Resilience, and replace with new package Microsoft.Extensions.Http.Resilience 10.4.0",
+            "label": "Microsoft.Extensions.Http.Resilience 9.4.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Http.Resilience",
+              "PackageVersion": "9.4.0",
+              "PackageNewVersion": "10.4.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "891bc884-9324-4f9f-8aa2-c6be02129703",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MicroservicesServer.ServiceDefaults\\MicroservicesServer.ServiceDefaults.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.ServiceDiscovery, 9.3.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.ServiceDiscovery, and replace with new package Microsoft.Extensions.ServiceDiscovery 10.4.0",
+              "protected": "Microsoft.Extensions.ServiceDiscovery, 9.3.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.ServiceDiscovery, and replace with new package Microsoft.Extensions.ServiceDiscovery 10.4.0"
+            },
+            "kind": "File",
+            "path": "MicroservicesServer.ServiceDefaults\\MicroservicesServer.ServiceDefaults.csproj",
+            "snippet": "Microsoft.Extensions.ServiceDiscovery, 9.3.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.ServiceDiscovery, and replace with new package Microsoft.Extensions.ServiceDiscovery 10.4.0",
+            "protectedSnippet": "Microsoft.Extensions.ServiceDiscovery, 9.3.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.ServiceDiscovery, and replace with new package Microsoft.Extensions.ServiceDiscovery 10.4.0",
+            "label": "Microsoft.Extensions.ServiceDiscovery 9.3.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.ServiceDiscovery",
+              "PackageVersion": "9.3.1",
+              "PackageNewVersion": "10.4.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "4bd49a55-df68-4edd-8dc3-61580349ab32",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MicroservicesServer.ServiceDefaults\\MicroservicesServer.ServiceDefaults.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "OpenTelemetry.Instrumentation.AspNetCore, 1.9.0\n\nRecommendation:\n\nRemove OpenTelemetry.Instrumentation.AspNetCore, and replace with new package OpenTelemetry.Instrumentation.AspNetCore 1.15.1",
+              "protected": "OpenTelemetry.Instrumentation.AspNetCore, 1.9.0\n\nRecommendation:\n\nRemove OpenTelemetry.Instrumentation.AspNetCore, and replace with new package OpenTelemetry.Instrumentation.AspNetCore 1.15.1"
+            },
+            "kind": "File",
+            "path": "MicroservicesServer.ServiceDefaults\\MicroservicesServer.ServiceDefaults.csproj",
+            "snippet": "OpenTelemetry.Instrumentation.AspNetCore, 1.9.0\n\nRecommendation:\n\nRemove OpenTelemetry.Instrumentation.AspNetCore, and replace with new package OpenTelemetry.Instrumentation.AspNetCore 1.15.1",
+            "protectedSnippet": "OpenTelemetry.Instrumentation.AspNetCore, 1.9.0\n\nRecommendation:\n\nRemove OpenTelemetry.Instrumentation.AspNetCore, and replace with new package OpenTelemetry.Instrumentation.AspNetCore 1.15.1",
+            "label": "OpenTelemetry.Instrumentation.AspNetCore 1.9.0",
+            "properties": {
+              "PackageId": "OpenTelemetry.Instrumentation.AspNetCore",
+              "PackageVersion": "1.9.0",
+              "PackageNewVersion": "1.15.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "0291fb69-189c-4ae6-898a-8e353e262bdf",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MicroservicesServer.ServiceDefaults\\MicroservicesServer.ServiceDefaults.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "OpenTelemetry.Instrumentation.Http, 1.9.0\n\nRecommendation:\n\nRemove OpenTelemetry.Instrumentation.Http, and replace with new package OpenTelemetry.Instrumentation.Http 1.15.0",
+              "protected": "OpenTelemetry.Instrumentation.Http, 1.9.0\n\nRecommendation:\n\nRemove OpenTelemetry.Instrumentation.Http, and replace with new package OpenTelemetry.Instrumentation.Http 1.15.0"
+            },
+            "kind": "File",
+            "path": "MicroservicesServer.ServiceDefaults\\MicroservicesServer.ServiceDefaults.csproj",
+            "snippet": "OpenTelemetry.Instrumentation.Http, 1.9.0\n\nRecommendation:\n\nRemove OpenTelemetry.Instrumentation.Http, and replace with new package OpenTelemetry.Instrumentation.Http 1.15.0",
+            "protectedSnippet": "OpenTelemetry.Instrumentation.Http, 1.9.0\n\nRecommendation:\n\nRemove OpenTelemetry.Instrumentation.Http, and replace with new package OpenTelemetry.Instrumentation.Http 1.15.0",
+            "label": "OpenTelemetry.Instrumentation.Http 1.9.0",
+            "properties": {
+              "PackageId": "OpenTelemetry.Instrumentation.Http",
+              "PackageVersion": "1.9.0",
+              "PackageNewVersion": "1.15.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "7d0f8c68-3ae6-4b1a-9d00-66e83bc27060",
+          "ruleId": "Project.0002",
+          "projectPath": "MicroservicesServer.ServiceDefaults\\MicroservicesServer.ServiceDefaults.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "MicroservicesServer.ServiceDefaults\\MicroservicesServer.ServiceDefaults.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "ServiceRegistry\\ServiceRegistry.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "ServiceRegistry",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 5,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 134,
+        "linesOfCode": 117,
+        "totalApiScanned": 128,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "00569ec1-e694-4f9b-8f23-1fe025af682d",
+          "ruleId": "Project.0002",
+          "projectPath": "ServiceRegistry\\ServiceRegistry.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "ServiceRegistry\\ServiceRegistry.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "ServiceShare\\ServiceShare.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 10,
+      "properties": {
+        "appName": "ServiceShare",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 6,
+        "numberOfCodeFiles": 6,
+        "linesTotal": 587,
+        "linesOfCode": 587,
+        "totalApiScanned": 711,
+        "minLinesOfCodeToChange": 5,
+        "maxLinesOfCodeToChange": 5
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "91c000b5-2a42-42ce-9c0b-3ba4ef9b3d62",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ServiceShare\\ServiceShare.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Hosting.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.5",
+              "protected": "Microsoft.Extensions.Hosting.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.5"
+            },
+            "kind": "File",
+            "path": "ServiceShare\\ServiceShare.csproj",
+            "snippet": "Microsoft.Extensions.Hosting.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.5",
+            "protectedSnippet": "Microsoft.Extensions.Hosting.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.5",
+            "label": "Microsoft.Extensions.Hosting.Abstractions 9.0.9",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Hosting.Abstractions",
+              "PackageVersion": "9.0.9",
+              "PackageNewVersion": "10.0.5",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "c0e72e0c-7263-4c08-89d0-05eace20c754",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ServiceShare\\ServiceShare.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.5",
+              "protected": "Microsoft.Extensions.Logging.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.5"
+            },
+            "kind": "File",
+            "path": "ServiceShare\\ServiceShare.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.5",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.5",
+            "label": "Microsoft.Extensions.Logging.Abstractions 9.0.9",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Abstractions",
+              "PackageVersion": "9.0.9",
+              "PackageNewVersion": "10.0.5",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "a9ccf491-6350-4520-8024-10567c77b6cb",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ServiceShare\\ServiceShare.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Options, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options, and replace with new package Microsoft.Extensions.Options 10.0.5",
+              "protected": "Microsoft.Extensions.Options, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options, and replace with new package Microsoft.Extensions.Options 10.0.5"
+            },
+            "kind": "File",
+            "path": "ServiceShare\\ServiceShare.csproj",
+            "snippet": "Microsoft.Extensions.Options, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options, and replace with new package Microsoft.Extensions.Options 10.0.5",
+            "protectedSnippet": "Microsoft.Extensions.Options, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options, and replace with new package Microsoft.Extensions.Options 10.0.5",
+            "label": "Microsoft.Extensions.Options 9.0.9",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Options",
+              "PackageVersion": "9.0.9",
+              "PackageNewVersion": "10.0.5",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "1e96bb58-9772-4061-afbf-1f8bfb8e1eac",
+          "ruleId": "NuGet.0002",
+          "projectPath": "ServiceShare\\ServiceShare.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Options.ConfigurationExtensions, 9.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.5",
+              "protected": "Microsoft.Extensions.Options.ConfigurationExtensions, 9.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.5"
+            },
+            "kind": "File",
+            "path": "ServiceShare\\ServiceShare.csproj",
+            "snippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 9.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.5",
+            "protectedSnippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 9.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.5",
+            "label": "Microsoft.Extensions.Options.ConfigurationExtensions 9.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Options.ConfigurationExtensions",
+              "PackageVersion": "9.0.0",
+              "PackageNewVersion": "10.0.5",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "8fdf4a31-7d51-4d9a-af64-61cd3fcb418e",
+          "ruleId": "Project.0002",
+          "projectPath": "ServiceShare\\ServiceShare.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "ServiceShare\\ServiceShare.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "cdbb7d19-ccde-428e-9798-ff8ee214141c",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "ServiceShare\\ServiceShare.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "ServiceShare\\EventBus\\KafkaConsumerService.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 164,
+            "column": 20
+          }
+        },
+        {
+          "incidentId": "204688da-6244-4fe2-8987-19698fb12505",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "ServiceShare\\ServiceShare.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "ServiceShare\\EventBus\\KafkaConsumerService.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 149,
+            "column": 24
+          }
+        },
+        {
+          "incidentId": "f51f07d1-8fd4-41d1-aade-68278363286f",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "ServiceShare\\ServiceShare.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "_producer?.Flush(TimeSpan.FromSeconds(10));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "ServiceShare\\EventBus\\KafkaEventBus.cs",
+            "snippet": "_producer?.Flush(TimeSpan.FromSeconds(10));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 110,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "62ecc046-5340-4701-ac89-f38d4c90d789",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "ServiceShare\\ServiceShare.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "OptionsConfigurationServiceCollectionExtensions.Configure\u003CKafkaSettings\u003E(\r\n            services,\r\n            configuration.GetSection(KafkaSettings.SECTION_NAME));",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "ServiceShare\\EventBus\\KafkaEventBusExtensions.cs",
+            "snippet": "OptionsConfigurationServiceCollectionExtensions.Configure\u003CKafkaSettings\u003E(\r\n            services,\r\n            configuration.GetSection(KafkaSettings.SECTION_NAME));",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 59,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "3409acab-2898-41ae-b47f-c58721ed7e47",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "ServiceShare\\ServiceShare.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "OptionsConfigurationServiceCollectionExtensions.Configure\u003CKafkaSettings\u003E(\r\n            services,\r\n            configuration.GetSection(KafkaSettings.SECTION_NAME));",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "ServiceShare\\EventBus\\KafkaEventBusExtensions.cs",
+            "snippet": "OptionsConfigurationServiceCollectionExtensions.Configure\u003CKafkaSettings\u003E(\r\n            services,\r\n            configuration.GetSection(KafkaSettings.SECTION_NAME));",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 22,
+            "column": 8
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "SharedContracts\\SharedContracts.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "SharedContracts",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.1"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 10,
+        "numberOfCodeFiles": 10,
+        "linesTotal": 1200,
+        "linesOfCode": 1200,
+        "totalApiScanned": 701,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "4f8c04fe-630e-4e8b-96f0-73a837f2eb71",
+          "ruleId": "NuGet.0002",
+          "projectPath": "SharedContracts\\SharedContracts.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.5",
+              "protected": "Microsoft.Extensions.Logging.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.5"
+            },
+            "kind": "File",
+            "path": "SharedContracts\\SharedContracts.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.5",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Abstractions, 9.0.9\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.5",
+            "label": "Microsoft.Extensions.Logging.Abstractions 9.0.9",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Abstractions",
+              "PackageVersion": "9.0.9",
+              "PackageNewVersion": "10.0.5",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0001": {
+      "id": "Api.0001",
+      "isFeature": false,
+      "description": "API is binary incompatible for selected .NET version: affects existing binaries, often requiring recompilation, because the API has changed in a way that prevents older binaries from loading or executing.",
+      "label": "Binary incompatible for selected .NET version",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0005": {
+      "id": "NuGet.0005",
+      "isFeature": false,
+      "description": "NuGet package is deprecated.\n\nGo to its documentation and if there is a guidance for replacement of functionality provided by this package.",
+      "label": "NuGet package is deprecated",
+      "severity": "Optional",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262531",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "MongoDB": {
+    "ConnectionString": "mongodb://localhost:27017",
+    "DatabaseName": "AuthServiceDb"
+  },
+  "Kafka": {
+    "EnableAutoCommit": true,
+    "AutoCommitIntervalMs": 5000,
+    "SessionTimeoutMs": 30000,
+    "MaxPollIntervalMs": 300000,
+    "AutoOffsetReset": "earliest",
+    "EnableIdempotence": true,
+    "MaxInFlight": 5,
+    "Acks": "all",
+    "RetryBackoffMs": 100,
+    "ConsumerGroupId": "auth-service-group"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  }
+}
