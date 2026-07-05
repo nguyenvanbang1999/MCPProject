@@ -11,7 +11,11 @@
       "Bash(awk '{sum+=$1} END{print sum/1024/1024\" MB\"}')",
       "Bash(git commit -m ' *)",
       "Bash(git ls-remote *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(ls -la .mcp.json 2>&1; echo \"---\"; ls -la ~/.claude.json 2>&1)",
+      "mcp__unityMCP__read_console",
+      "mcp__unityMCP__manage_scene",
+      "mcp__unityMCP__find_gameobjects"
     ]
   }
 }

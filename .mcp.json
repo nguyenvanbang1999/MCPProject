@@ -1,8 +1,9 @@
 {
   "mcpServers": {
     "unityMCP": {
-      "command": "C:\\Users\\Kyu\\.local\\bin\\uvx.exe",
+      "command": "C:\\Users\\Admin\\.local\\bin\\uvx.exe",
       "args": [
+        "--offline",
         "--from",
         "mcpforunityserver==10.0.0",
         "mcp-for-unity",
