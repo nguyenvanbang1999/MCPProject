@@ -73,7 +73,6 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 *.ilk
-*.meta
 *.obj
 *.idb
 *.iobj
