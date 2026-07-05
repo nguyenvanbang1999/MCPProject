@@ -5,7 +5,13 @@
       "Bash(git init *)",
       "Bash(git branch *)",
       "Bash(git remote *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(awk '{print $4}')",
+      "Bash(xargs -I{} du -b \"{}\")",
+      "Bash(awk '{sum+=$1} END{print sum/1024/1024\" MB\"}')",
+      "Bash(git commit -m ' *)",
+      "Bash(git ls-remote *)",
+      "Bash(git push *)"
     ]
   }
 }
