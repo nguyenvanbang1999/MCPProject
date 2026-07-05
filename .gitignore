@@ -15,10 +15,7 @@
 .gradle/
 ExportedObj/
 .consulo/
-*.csproj
 *.unityproj
-*.sln
-*.slnx
 *.pidb
 *.booproj
 *.svd
@@ -111,7 +108,6 @@ coverage*.info
 node_modules/
 *.nupkg
 *.snupkg
-**/[Pp]ackages/*
 !**/[Pp]ackages/build/
 *.binlog
 MSBuild_Logs/
