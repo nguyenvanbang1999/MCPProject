@@ -15,10 +15,7 @@
 .gradle/
 ExportedObj/
 .consulo/
-*.csproj
 *.unityproj
-*.sln
-*.slnx
 *.pidb
 *.booproj
 *.svd
