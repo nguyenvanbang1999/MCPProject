@@ -25,6 +25,9 @@
         "agent",
         "mcp"
       ]
+    },
+    "discord-bot": {
+      "command": "C:\\Users\\Admin\\Claude\\Projects\\DiscordBotMCP\\ProjectDotnet\\DiscordBotMCP\\DiscordBotMCP\\bin\\Debug\\net10.0\\DiscordBotMCP.exe"
     }
   }
 }
