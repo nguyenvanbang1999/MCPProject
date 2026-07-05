@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>AuthService.Contracts</id>
+    <version>1.0.6</version>
+    <authors>183cm</authors>
+    <description>Định nghĩa phần share của Auth Service</description>
+    <repository type="git" commit="88c3f8a399de33c189709bfe59af13c9fa94d6aa" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="SharedContracts" version="1.0.11" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -108,7 +108,6 @@ coverage*.info
 node_modules/
 *.nupkg
 *.snupkg
-!**/[Pp]ackages/build/
 *.binlog
 MSBuild_Logs/
 .vscode/*

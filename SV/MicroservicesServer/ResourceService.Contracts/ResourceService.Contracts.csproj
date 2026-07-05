@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ResourceService.Contracts</RootNamespace>
+    <AssemblyName>ResourceService.Contracts</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>ResourceService.Contracts</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>183cm</Authors>
+    <Description>Định nghĩa phần share của Resource Service</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharedContracts\SharedContracts.csproj" />
+  </ItemGroup>
+
+</Project>

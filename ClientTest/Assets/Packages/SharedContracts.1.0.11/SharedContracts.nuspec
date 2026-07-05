@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>SharedContracts</id>
+    <version>1.0.11</version>
+    <authors>183cm</authors>
+    <description>Shared message definitions for Unity and Server</description>
+    <repository type="git" commit="f4c944ed09ab869853d697649a2e8940c1512f5d" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="MessagePack" version="3.1.4" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

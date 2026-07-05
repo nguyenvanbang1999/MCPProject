@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AuthService.Contracts\AccountService.Contracts.csproj" />
+    <ProjectReference Include="..\LevelService.Contracts\LevelService.Contracts.csproj" />
+    <ProjectReference Include="..\ResourceService.Contracts\ResourceService.Contracts.csproj" />
+    <ProjectReference Include="..\MicroservicesServer.ServiceDefaults\MicroservicesServer.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\ServiceRegistry\ServiceRegistry.csproj" />
+    <ProjectReference Include="..\ServiceShare\ServiceShare.csproj" />
+    <ProjectReference Include="..\SharedContracts\SharedContracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Events\" />
+  </ItemGroup>
+
+</Project>
